@@ -1,0 +1,171 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #333;
+  margin: 2rem;
+}
+a,
+a:visited {
+  color: #1a73e8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+p,
+pre,
+ul,
+ol {
+  margin: 1.25rem;
+}
+li ul {
+  margin: 0;
+}
+blockquote {
+  border-left: 5px solid #efefef;
+  padding-left: 0.75rem;
+}
+blockquote p {
+  margin: 0;
+}
+pre {
+  font-size: 0.875rem;
+  background: #efefef;
+  border-radius: 0.3125rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+pre.sourceCode {
+  padding: 0.5em;
+}
+li > code,
+p > code {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.2rem;
+  background: #efefef;
+  border-radius: 0.2rem;
+}
+h1 {
+  page-break-before: always;
+}
+h2 {
+  background: #e0ebf5;
+  color: #375eab;
+  line-height: 1.25;
+  padding: 0.5rem;
+  margin-top: 3rem;
+}
+.fa {
+  margin-right: 5px;
+}
+.fa-code,
+.fa-link {
+  font-size: 0.8rem;
+}
+hr + p {
+  margin-left: 0;
+  margin-right: 0;
+}
+hr + p > code {
+  background: transparent;
+}
+body.index p {
+  margin: auto;
+}
+a.permalink,
+a:visited.permalink,
+a:active.permalink {
+  display: none;
+  color: #ccc;
+  font-weight: normal;
+  text-decoration: none;
+}
+h1:hover .permalink,
+h2:hover .permalink,
+h3:hover .permalink,
+h4:hover .permalink {
+  display: inline;
+}
+h1:hover .permalink {
+  color: #b2cde6;
+}
+img.icon {
+  height: 1.15em;
+  width: 1em;
+  vertical-align: bottom;
+}
+.language-text {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #f0f0f0;
+}
+.evaluacion h2,
+.notes h2 {
+  margin: initial;
+  padding: initial;
+  background: inherit;
+  color: inherit;
+}
+.evaluacion table {
+  border-collapse: collapse;
+}
+.evaluacion table td,
+.evaluacion table th {
+  border: 1px solid #666;
+  padding: 0.75rem;
+}
+
+body {
+  counter-reset: section;
+}
+h2 {
+  counter-reset: sub-section;
+}
+h3 {
+  counter-reset: composite;
+}
+h4 {
+  counter-reset: detail;
+}
+h2:before {
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+h3:before {
+  counter-increment: sub-section;
+  content: counter(section) "." counter(sub-section) ". ";
+}
+h4:before {
+  counter-increment: composite;
+  content: counter(section) "." counter(sub-section) "." counter(composite) ". ";
+}
+h5:before {
+  counter-increment: detail;
+  content: counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) ". ";
+}
+
+body.exercises h2:before,
+body.exercises h3:before,
+body.spark_exercises h3:before,
+body.index h2:before,
+body.index h3:before,
+body.index h4:before,
+body.index h5:before {
+  content: "";
+}
+
+body.notes img {
+  width: 40%;
+  height: 40%;
+  padding-left: 2.5rem;
+  padding-top: 1em;
+}
+
+body.nats a img {
+  width: 60%;
+  height: 60%;
+  padding: 0;
+}
