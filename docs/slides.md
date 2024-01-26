@@ -1,3 +1,8 @@
+---
+author: luis b.
+paging: "%d / %d"
+---
+
 ```
                 ████████╗██╗░░██╗███████╗  ██████╗░░█████╗░████████╗░█████╗░
                 ╚══██╔══╝██║░░██║██╔════╝  ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗
@@ -28,21 +33,27 @@ Hands-on talk about processing data locally.
 
 ## Why are we doing this?
 
-I cannot see people doing replaces in editors or opening Excel.
+It's painful to see people using editors or Google Sheets to manipulate data.
 
 ---
 
 # What's in the menu?
 
-- 🥦 Appetizers The **Unix** Salad
-- 🌶️ Entrées     AWK or Pandas
-- 🦆 Main       Slow-roasted **DuckDB**
-- 🍣 Main       Marinated **ClickHouse**
-- 🧁 Dessert    **JQ** salty rotten chocolate pudding
+- 🥦 Appetizers  The **Unix** Salad
+- 🌶️  Entrées     AWK or Pandas
+- 🦆 Main        Slow-roasted **DuckDB**
+- 🍣 Main        Marinated **ClickHouse**
+- 🧁 Dessert     **JQ** salty rotten chocolate pudding
 
 ---
 
-# Content
+# Start! Where's the menu? 👩🏻‍🍳
+
+kitchen.luisbelloch.es
+
+---
+
+# Start!
 
 kitchen.luisbelloch.es
 

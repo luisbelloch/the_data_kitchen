@@ -26,7 +26,7 @@ BYXCGLP161,4.44,MW,Malawi
 Solve the exercise by sending the ante-penultimate row, sorted by `item_price` descending.
 
 ```bash
-curl -sX POST kitchen.luisbelloch.es/api/:team/e1 -d 'FPQINMY120,0.04,SD,Sudan'
+curl -sX POST https://kitchen.luisbelloch.es/api/:team/e1 -d 'FPQINMY120,0.04,SD,Sudan'
 ```
 
 ## Entrées - A tale of two choices
@@ -40,7 +40,7 @@ Using `awk`, read the file `sales.csv` and produce a list of the top-ten countri
 Solve the exercise by sending the second row
 
 ```bash
-curl -sX POST kitchen.luisbelloch.es/api/:team/e2a -d 'KM|595.81'
+curl -sX POST https://kitchen.luisbelloch.es/api/:team/e2a -d 'KM|595.81'
 ```
 
 #### 🍗 Option B: Pandas Fillet
@@ -60,7 +60,7 @@ Then navigate to the provider URL. `ctrl+enter` executes the current cell, use `
 Solve the exercise by sending the second row
 
 ```bash
-curl -sX POST kitchen.luisbelloch.es/api/:team/e2b -d 'KM|595.81'
+curl -sX POST https://kitchen.luisbelloch.es/api/:team/e2b -d 'KM|595.81'
 ```
 
 ## 🦆 Main: Slow-roasted DuckDB
@@ -97,7 +97,7 @@ Namibia,299101.0800000052
 Solve the exercise by sending the 4<sup>th</sup> row (Finland).
 
 ```bash
-curl -sX POST kitchen.luisbelloch.es/api/:team/e3 -d 'Namibia,299101.0800000052'
+curl -sX POST https://kitchen.luisbelloch.es/api/:team/e3 -d 'Namibia,299101.0800000052'
 ```
 
 **Optional**: Try to query directly the CSV and also load the data into a `some.duckdb` file. Does the later make a difference in performance?
@@ -118,7 +118,7 @@ Repeat the DuckDB exercise, but this time using ClickHouse:
 Solve the exercise by sending the 5<sup>th</sup> row (Peru), like in the previous exercise.
 
 ```bash
-curl -sX POST kitchen.luisbelloch.es/api/:team/e4 -d 'Namibia,299101.0800000052'
+curl -sX POST https://kitchen.luisbelloch.es/api/:team/e4 -d 'Namibia,299101.0800000052'
 ```
 
 ## 🧁 Dessert: JQ salty rotten chocolate pudding
