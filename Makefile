@@ -14,6 +14,10 @@ clean:
 watch:
 	fswatch -d $(SRC) --latency 1 | xargs -n1 -I{} sh -c "make clean && make -j5 all"
 
+.PHONY: spellcheck
+spellcheck:
+	$(foreach mdfile, $(MD_FILES), aspell check --dont-backup --mode=markdown --lang=en $(mdfile);)
+
 $(OUT):
 	mkdir -p $@
 

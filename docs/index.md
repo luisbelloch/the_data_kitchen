@@ -5,9 +5,9 @@ classic: true
 
 # The Data Kitchen
 
-Welcome to our restaurant! This site was designed as an experiment to help people understand how to use simple tools to process data localy.
+Welcome to our restaurant! This site was designed as an experiment to help people understand how to use simple tools to process data locally.
 
-## 🥦 Apetizers: The Unix Salad
+## 🥦 Appetizers: The Unix Salad
 
 [Recipes](./starters.html)
 
@@ -23,7 +23,7 @@ BEIGKQD194,93.87,MV,Maldives
 BYXCGLP161,4.44,MW,Malawi
 ```
 
-Solve the exercise by sending the antepenultimate row, sorted by `item_price` descending.
+Solve the exercise by sending the ante-penultimate row, sorted by `item_price` descending.
 
 ```bash
 curl -sX POST kitchen.luisbelloch.es/api/:team/e1 -d 'FPQINMY120,0.04,SD,Sudan'
@@ -55,7 +55,7 @@ One easy way to get started is to use a [Jupyter environment](https://jupyter-do
 docker run -v $(pwd):/home/jovyan/ -p 8888:8888 -p 4040:4040 jupyter/scipy-notebook
 ```
 
-Then navigate to the provider URL. `ctrl+enter` executes the current cell, use `a` or `b` keys to add cells. Alternativelly you may use [VS Code Jupyter extensions](https://code.visualstudio.com/docs/datascience/jupyter-notebooks), but it's a bit painful to install.
+Then navigate to the provider URL. `ctrl+enter` executes the current cell, use `a` or `b` keys to add cells. Alternatively you may use [VS Code Jupyter extensions](https://code.visualstudio.com/docs/datascience/jupyter-notebooks), but it's a bit painful to install.
 
 Solve the exercise by sending the second row
 

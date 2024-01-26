@@ -3,3 +3,4 @@ _bun/
 .direnv/
 clickhouse
 data/pancake_orders.10M.csv.gz
+*.md.bak

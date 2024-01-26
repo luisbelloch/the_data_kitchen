@@ -60,7 +60,7 @@ heo
 
 ## AWK
 
-From the manual: [Unix tools reimplemented in simple AWK scripts](https://www.gnu.org/software/gawk/manual/gawk.html#Clones)
+From the manual: [Unix tools re-implemented in simple AWK scripts](https://www.gnu.org/software/gawk/manual/gawk.html#Clones)
 
 ### Print Specific Fields
 
@@ -226,7 +226,7 @@ jq -rcs '.[] | {code}' countries.jsonl
 
 Arrays are built using `[]` instead of `{}`, as expected.
 
-### Full-fledge programs in external files
+### Full-fledged programs in external files
 
 Normally you would run it using `-f` option.
 

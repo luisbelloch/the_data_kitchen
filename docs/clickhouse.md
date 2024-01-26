@@ -67,7 +67,7 @@ Read CSV and output in Parquet:
   --output_format_parquet_compression_method=gzip
 ```
 
-And then read that Parquet file and ouput json lines:
+And then read that Parquet file and output json lines:
 
 ```bash
 ./clickhouse local -q "select * from file('data/sales.parquet') format JSONEachRow"
