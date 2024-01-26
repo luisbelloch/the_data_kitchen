@@ -80,9 +80,9 @@ The file `pancake_orders.10M.csv.gz` contains 10 million registers, with the fol
 └──────────────┴────────┴────────────┴────────────────┴─────────────┘
 ```
 
-You are required to get the top-ten countries with more sales, mixing the data with `countries.jsonl` file. You can only use DuckDB, no external tooling.
+Data file can be found here: [pancake_orders.10M.csv.gz](https://storage.googleapis.com/data.luisbelloch.es/pancake_orders.10M.csv.gz). Do not decompress it, DuckDB is able to read compressed files on the fly.
 
-Remember that Duck DB is able to read compressed files on the fly.
+You are required to get the top-ten countries with more sales, mixing the data with `countries.jsonl` file. You can only use DuckDB, no external tooling.
 
 Result should look like this:
 
