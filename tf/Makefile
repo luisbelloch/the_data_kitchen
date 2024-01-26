@@ -7,6 +7,7 @@ TF_VARS:=-var="image_tag=$(COMMIT_ID)" -var="gcloud_access_token=$(shell gcloud 
 
 .PHONY: up
 up: .terraform
+	$(MAKE) -C ../app push
 	terraform apply $(TF_VARS)
 
 .PHONY: down

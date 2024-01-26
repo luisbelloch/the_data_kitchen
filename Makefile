@@ -4,7 +4,11 @@ MD_FILES := $(wildcard $(SRC)/*.md)
 HTML_FILES := $(patsubst $(SRC)/%.md,$(OUT)/%.html,$(MD_FILES))
 
 .PHONY: all
-all: $(HTML_FILES) $(OUT)/classic.css $(OUT)/recipe.css
+all: docs
+	 $(MAKE) -C app build
+
+.PHONY: docs
+docs: $(HTML_FILES) $(OUT)/classic.css $(OUT)/recipe.css
 
 .PHONY: clean
 clean:
