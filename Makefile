@@ -4,7 +4,7 @@ MD_FILES := $(wildcard $(SRC)/*.md)
 HTML_FILES := $(patsubst $(SRC)/%.md,$(OUT)/%.html,$(MD_FILES))
 
 .PHONY: all
-all: docs
+all: docs README.md
 	 $(MAKE) -C app build
 
 .PHONY: docs
@@ -13,6 +13,7 @@ docs: $(HTML_FILES) $(OUT)/classic.css $(OUT)/recipe.css
 .PHONY: clean
 clean:
 	rm -rf $(OUT)
+	-rm README.md
 
 .PHONY: watch
 watch:
@@ -31,4 +32,6 @@ $(OUT)/%.html: docs/%.md $(OUT)
 $(OUT)/%.css: docs/%.css
 	cp $< $@
 
+README.md:
+	tail -n +6 $(SRC)/index.md | sed 's/\(\[.*\]\)(\.\//\1\(\.\/docs\//g;s/\.html/\.md/g' > README.md
 
