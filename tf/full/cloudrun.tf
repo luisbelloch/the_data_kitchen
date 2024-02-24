@@ -1,28 +1,28 @@
 provider "google" {
   project      = var.gcloud_project
-  region       = "europe-west1"
+  region       = var.region
   access_token = var.gcloud_access_token
 }
 
 resource "google_project_service" "run_api" {
   service            = "run.googleapis.com"
-  disable_on_destroy = true
+  disable_on_destroy = false
 }
 
 resource "google_cloud_run_service" "kitchen" {
   name     = "kitchen"
-  location = "europe-west1"
+  location = var.region
 
   template {
     spec {
       containers {
-        image = "eu.gcr.io/${var.gcloud_project}/luisbelloch/kitchen:${var.image_tag}"
+        image = "${var.region}-docker.pkg.dev/${var.gcloud_project}/${var.repository_id}/${var.docker_image}:${var.image_tag}"
         ports {
           container_port = 3000
         }
         resources {
           limits = {
-            "cpu"  = "1000m"
+            cpu    = "1000m"
             memory = "128Mi"
           }
         }
@@ -59,8 +59,8 @@ resource "google_cloud_run_service_iam_policy" "noauth" {
 }
 
 resource "google_cloud_run_domain_mapping" "kitchen" {
-  location = "europe-west1"
-  name     = "kitchen.luisbelloch.es"
+  location = var.region
+  name     = var.domain
 
   metadata {
     namespace = var.gcloud_project

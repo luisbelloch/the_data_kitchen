@@ -4,7 +4,12 @@ variable "cloudflare_api_key" {}
 variable "gcloud_access_token" {}
 variable "gcloud_project" {}
 
-variable "image_tag" {
+variable "region" {
   type    = string
-  default = "latest"
+  default = "us-east1"
+}
+
+variable "domain" {
+  type    = string
+  default = "kitchen.luisbelloch.es"
 }
